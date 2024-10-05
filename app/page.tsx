@@ -2,13 +2,12 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <>
-    <div className='bg-gray-100 flex-1 space-y-4 p-8'>
+    <div className='bg-gray-100 flex-1 space-y-4 p8'>
       <div>
-        <Activity />
+        {/* <Activity /> */}
        </div>
 
-       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
+       {/* <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
                 <Card className="col-span-4 xl:col-span-5">
                   <CardHeader>
                     <CardTitle>Subscriptions/Active users</CardTitle>
@@ -25,9 +24,9 @@ export default function Home() {
                     <Complaints />
                   </CardContent>
                 </Card>
-        </div>
+        </div> */}
 
-        <div>
+        {/* <div>
             <Card className="col-span-3">
                   <CardHeader>
                     <CardTitle>47 pending disputes</CardTitle>
@@ -36,7 +35,7 @@ export default function Home() {
                     <Disputes />
                   </CardContent>
             </Card>
-        </div>
+        </div> */}
     </div>
   );
 }
