@@ -12,6 +12,7 @@ export type button = {
 
 export type SidebarItemGroup = {
     title: string;
+    className?:string,
     menuList: SidebarItem[];
 }
 

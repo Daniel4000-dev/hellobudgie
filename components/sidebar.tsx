@@ -3,12 +3,13 @@ import Image from '@/node_modules/next/image'
 import React from 'react'
 import SidebarMenuGroup from './sidebarmenugroup'
 import Icon from '../public/icon'
+import { SidebarItemGroup } from '@/types/types'
 
-const Sidebar = () => {
+const Sidebar = ({className=''}: SidebarItemGroup) => {
   return (
     <div className='bg-[#040930] flex fixed top-0 z-50'>
-      <div className='h-screen w-[235px]'>
-        <div className="ml-6 pt-6 pb-[10vh] flex gap-1 ">
+      <div className='h-screen w-[222px]'>
+        <div className="m-6 pb-[6.5vh] flex gap-1 ">
           <div className='flex'>
             <Image className='h-7' src={Icon.H} />
             <Image className='-ml-[11px] mt-[6px]' src={Icon.B} />
@@ -16,9 +17,9 @@ const Sidebar = () => {
             <span className='text-white text-lg'>hellobudgie</span>
         </div>
         <nav>
-          <div className='bg-green-100 m-6  text-xs'>
+          <div className='m-5  text-xs'>
             {SIDEBAR_ITEMS.map((item, index) => {
-              return <SidebarMenuGroup key={index} menuGroup={item} />
+              return <SidebarMenuGroup className='' key={index} menuGroup={item} />
             })}
           </div>
         </nav>
