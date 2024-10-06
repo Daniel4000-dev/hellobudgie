@@ -27,7 +27,7 @@ const Overhead = () => {
                 className="rounded-full w-[23em] border-[0.1px] border-gray-300 p-2"
                 placeholder={``}
               />
-              <span className="bg-[#E8903D] rounded-full text-white z-50 -ml[15.5vw] -ml-[103px] md:-ml-[106px]">
+              <span className="bg-[#E8903D] rounded-full text-white -ml[15.5vw] -ml-[103px] md:-ml-[106px]">
                 <div className="flex items-center gap-2 m-1.5 pl-2 pr-2">
                   <Image className="w-4 h-4" src={Icon.Search} />
                   <h3>Search</h3>

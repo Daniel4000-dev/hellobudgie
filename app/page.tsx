@@ -43,14 +43,14 @@ export default function Home() {
   </div>
 
   <div className="col-span-1 mb-4">
-    <Card className="bg-gray-800 w-full">
-      <CardHeader>
-        <CardTitle className="text-xl font-light">Top products</CardTitle>
-      </CardHeader>
-      <CardContent className="">
+    <div className="w-full bg-white rounded-xl">
+      <div>
+        <h2 className="text-xl font-light p-4">Top products</h2>
+      </div>
+      <div className="w-full">
         <OverviewProduct />
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   </div>
 
 </div>
