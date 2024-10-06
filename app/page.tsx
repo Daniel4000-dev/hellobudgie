@@ -13,48 +13,49 @@ export default function Home() {
         <Overhead />
       </div>
       <div className="grid grid-cols-3 gap-4 p-8">
-  
-  <div className="col-span-2 space-y-4">
-    <div>
-      <OverviewSummary />
-    </div>
+        <div className="col-span-2 space-y-4">
+          <div>
+            <OverviewSummary />
+          </div>
 
-    <div className="w-full">
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-xl font-light">Visitors vs Order</CardTitle>
-        </CardHeader>
-        <CardContent className="pl-2 overflow-x">
-          <Overview />
-        </CardContent>
-      </Card>
-    </div>
+          <div className="w-full">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-xl font-light">
+                  Visitors vs Order
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="pl-2 overflow-x">
+                <Overview />
+              </CardContent>
+            </Card>
+          </div>
 
-    <div>
-      <Card className="mb-4">
-        <CardHeader>
-          <CardTitle className="text-xl font-light">Recent Invoices</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <OverviewTable />
-        </CardContent>
-      </Card>
-    </div>
-  </div>
+          <div>
+            <Card className="mb-4">
+              <CardHeader>
+                <CardTitle className="text-xl font-light">
+                  Recent Invoices
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <OverviewTable />
+              </CardContent>
+            </Card>
+          </div>
+        </div>
 
-  <div className="col-span-1 mb-4">
-    <div className="w-full bg-white rounded-xl">
-      <div>
-        <h2 className="text-xl font-light p-4">Top products</h2>
+        <div className="col-span-1 mb-4">
+          <div className="w-full bg-white rounded-xl">
+            <div>
+              <h2 className="text-xl font-light p-4">Top products</h2>
+            </div>
+            <div className="w-full">
+              <OverviewProduct />
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="w-full">
-        <OverviewProduct />
-      </div>
-    </div>
-  </div>
-
-</div>
-
     </div>
   );
 }
