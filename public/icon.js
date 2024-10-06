@@ -11,6 +11,8 @@ import Orders from './orders.png';
 import Overview from './overview.png';
 import Products from './products.png';
 import ArrowDown from './arrow-down2.png'
+import DangerCircle from './dangerCircle.png'
+import Logout from './logout.png'
 
 
 
@@ -28,4 +30,6 @@ export default {
     Overview,
     Products,
     ArrowDown,
+    DangerCircle,
+    Logout,
 }

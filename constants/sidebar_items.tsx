@@ -10,7 +10,6 @@ import Help from '../public/help.png'
 export const SIDEBAR_ITEMS: SidebarItemGroup[] = [
 
     {
-      title:"Dashboards",
       menuList:[ {
         title: "Overview",
         path: "/",
