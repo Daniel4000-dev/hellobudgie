@@ -27,3 +27,9 @@ export type OverviewSummaryItem = {
     body: string;
     note: string;
 }
+
+export type OverviewProductItem = {
+    title: string;
+    price: string;
+    piece: string;
+}
