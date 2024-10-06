@@ -41,9 +41,9 @@ export default function Home() {
         </div>
         </div>
         <div className="mb-4">
-          <Card className="w-[23vw] h-full mr-8">
+          <Card className="w-[23vw] h-[115.5vh] overflow-hidden overflow-y-scroll mr-8">
             <CardHeader>
-              <CardTitle>Summary of complaints</CardTitle>
+              <CardTitle className="text-xl font-light">Top products</CardTitle>
             </CardHeader>
             <CardContent><OverviewProduct /></CardContent>
           </Card>
