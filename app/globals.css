@@ -10,6 +10,11 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: Just in case */
+  }
 }
 
 @layer base {

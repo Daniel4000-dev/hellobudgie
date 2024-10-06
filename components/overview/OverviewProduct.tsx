@@ -5,11 +5,11 @@ import React from "react";
 
 const OverviewProduct = () => {
   return (
-    <div className="overflow-hidden overflow-y-scroll">
-      <div>
+    <div className="w-full h-[103vh] custom-scrollbar overflow-y-scroll">
+      <div className="fle gap-Z">
         {OVERVIEWPRODUCT_ITEMS.map((item, index) => (
-          <div className="overflowy bg-gray-500" key={index}>
-            <div className="flex gap-4 items-center">
+          <div className="border-b-[1px] border-gray-100 pb-1 overflowy bg-gray-500" key={index}>
+            <div className="pb-2 pt-3 flex gap-4 items-center">
               <div>
                 <Image src={Icon.Phone} />
               </div>

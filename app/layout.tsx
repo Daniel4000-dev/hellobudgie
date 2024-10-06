@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`
-          min-h-screen overflowhidden
+          min-h-screen custom-scrollbar
           ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <>
