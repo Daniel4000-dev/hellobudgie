@@ -20,3 +20,10 @@ export type SidebarItem = {
     path: string;
     icon?: StaticImageData;
 };
+
+export type OverviewSummaryItem = {
+    title: string;
+    icon?: StaticImageData;
+    body: string;
+    note: string;
+}

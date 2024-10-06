@@ -13,6 +13,7 @@ import Products from './products.png';
 import ArrowDown from './arrow-down2.png'
 import DangerCircle from './dangerCircle.png'
 import Logout from './logout.png'
+import Search from './search-normal.png'
 
 
 
@@ -32,4 +33,5 @@ export default {
     ArrowDown,
     DangerCircle,
     Logout,
+    Search,
 }
