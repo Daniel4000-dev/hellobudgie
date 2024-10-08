@@ -80,7 +80,7 @@ export function DataTable<TData, TValue>({
     })
 
     return (
-      <div className="rounded-md border-none">
+      <div className="rounded-md border-none custom-scrollbar overflow-y-scroll">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup: { id: Key | null | undefined; headers: any[]; }) => (

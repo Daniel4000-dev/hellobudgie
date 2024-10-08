@@ -1,12 +1,18 @@
 "use client";
 
+import { StaticImageData } from "@/node_modules/next/image";
 import { ColumnDef } from "@tanstack/react-table";
 
 export type Payment = {
-    id: string
-    productName: string,
+    id: string,
+    productName: Pay,
     price: string
     quantity: string
+  }
+
+  export type Pay = {
+    icon?: StaticImageData;
+    name: string;
   }
 
   export const columns: ColumnDef<Payment>[] = [

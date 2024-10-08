@@ -19,6 +19,7 @@ import {
 // import { Button } from "@/components/ui/button";
 import { Key } from "react";
 import Button from "@/components/button";
+import Image from "@/node_modules/next/image";
 
 interface CustomerSupportTableProps<TData, TValue> {
     columns: ColumnDef<TValue, TValue>[]
@@ -31,10 +32,14 @@ const customCellRenderer = (cell: { getValue: (arg0: string) => any; column: { i
   const price = cell.getValue('price');
   const quantity = cell.getValue('quantity');
 
- if((cell.column.id) === "productName") {
+  const icon = productName?.icon;
+  const name = productName?.name;
+  
+  if((cell.column.id) === "productName") {
     return (
-      <div className=" overflow-hidden text-overflow-ellipsis">
-      <h2 className='text-sm line-clamp-1'>{productName}</h2>
+      <div className="flex items-center gap-4">
+        <Image src={icon} />
+      <h2 className='text-sm line-clamp-1'>{name}</h2>
       </div>
     );
   }else if((cell.column.id) === "price")  {
@@ -58,13 +63,6 @@ export function ProductTable<TData, TValue>({
       data,
       columns,
       getCoreRowModel: getCoreRowModel(),
-       getPaginationRowModel: getPaginationRowModel(),
-      initialState: {
-        pagination: {
-            "pageIndex": 0,
-            "pageSize": 6,
-        }
-      },
     })
 
     return (
@@ -92,6 +90,7 @@ export function ProductTable<TData, TValue>({
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row: { id: Key | null | undefined; getIsSelected: () => any; getVisibleCells: () => any[]; }) => (
                 <TableRow
+                  className="h-2 hover:bg-[#FFEDDC]"
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
                 >
@@ -111,34 +110,6 @@ export function ProductTable<TData, TValue>({
             )}
           </TableBody>
         </Table>
-        <div className="flex items-center justify-end space-x-2 py-4">
-      <div className="flex-1 text-sm text-mutedforeground">
-       Page {table.getState().pagination.pageIndex + 1} of{" "}
-        {table.getPageCount()}
-      </div>
-      <div className="space-x-2">
-        <Button
-          className="bg-white text-black border-[1px] border-[#E8903D] p-1"
-          title="Previous"
-          variant="outline"
-          size="sm"
-          onClick={() => table.previousPage()}
-          disabled={!table.getCanPreviousPage()}
-        >
-          Previous
-        </Button>
-        <Button
-          className="bg-white text-black border-[1px] border-[#E8903D] p-1 pr-5 pl-5"
-          title="Next"
-          variant="outline"
-          size="sm"
-          onClick={() => table.nextPage()}
-          disabled={!table.getCanNextPage()}
-        >
-          Next
-        </Button>
-      </div>
-    </div>
       </div>
     )
   }

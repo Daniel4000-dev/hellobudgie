@@ -15,6 +15,7 @@ import DangerCircle from './dangerCircle.png'
 import Logout from './logout.png'
 import Search from './search-normal.png'
 import Phone from './phone.png'
+import Laptop from './laptop.png'
 
 
 
@@ -35,5 +36,6 @@ export default {
     DangerCircle,
     Logout,
     Search,
-    Phone
+    Phone,
+    Laptop
 }
