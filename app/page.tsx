@@ -1,6 +1,6 @@
 import Overhead from "@/components/overview/Overhead";
 import { Overview } from "@/components/overview/Overview";
-import OverviewProduct from "@/components/overview/overviewProduct";
+import OverviewProduct from "@/components/overview/OverviewProduct";
 import OverviewTable from "@/components/overview/overviewTable/page";
 import OverviewSummary from "@/components/OverviewSummary";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
