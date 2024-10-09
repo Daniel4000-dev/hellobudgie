@@ -1,5 +1,5 @@
-import Overhead from "@/components/overview/overhead";
-import { Overview } from "@/components/overview/overview";
+import Overhead from "@/components/overview/Overhead";
+import { Overview } from "@/components/overview/Overview";
 import OverviewProduct from "@/components/overview/overviewProduct";
 import OverviewTable from "@/components/overview/overviewTable/page";
 import OverviewSummary from "@/components/OverviewSummary";

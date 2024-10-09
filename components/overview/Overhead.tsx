@@ -3,7 +3,7 @@ import { SIDEBAR_ITEMS } from '@/constants/sidebar_items'
 import React from 'react'
 import { usePathname } from "next/navigation";
 import Icon from "../../public/icon";
-import Image from "@/node_modules/next/image";
+import Image from "@/node_modules/@next/image";
 
 const Overhead = () => {
     const currentRoute = usePathname();
