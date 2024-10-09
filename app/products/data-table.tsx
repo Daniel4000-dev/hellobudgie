@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/table";
 // import { Button } from "@/components/ui/button";
 import { Key } from "react";
-import Button from "@/components/button";
+import Button from "@/components/Button";
 import Image from "@/node_modules/next/image";
 
 interface CustomerSupportTableProps<TData, TValue> {

@@ -4,7 +4,6 @@ import OverviewProduct from "@/components/overview/OverviewProduct";
 import OverviewTable from "@/components/overview/overviewTable/page";
 import OverviewSummary from "@/components/OverviewSummary";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Image from "next/image";
 
 export default function Home() {
   return (

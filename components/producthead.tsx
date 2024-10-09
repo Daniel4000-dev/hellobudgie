@@ -1,9 +1,9 @@
 'use client'
-import { SIDEBAR_ITEMS } from '@/constants/sidebar_items'
+import { SIDEBAR_ITEMS } from '@/constants/Sidebar_items'
 import React from 'react'
-import { usePathname } from "next/navigation";
 import Icon from "../public/icon";
 import Image from "@/node_modules/next/image";
+import { usePathname } from '@/node_modules/next/navigation';
 
 const Producthead = () => {
     const currentRoute = usePathname();

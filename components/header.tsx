@@ -1,7 +1,7 @@
 import React from "react";
 import { SidebarItem } from "@/types/types";
 import Icon from "../public/icon";
-import { SIDEBAR_ITEMS } from "@/constants/sidebar_items";
+import { SIDEBAR_ITEMS } from "@/constants/Sidebar_items";
 import Image from "@/node_modules/next/image";
 
 const Header = () => {

@@ -1,6 +1,6 @@
 import Image from '@/node_modules/next/image'
 import React from 'react'
-import Button from './button'
+import Button from './Button'
 import { Select } from './ui/select'
 import Icon from '../public/icon'
 

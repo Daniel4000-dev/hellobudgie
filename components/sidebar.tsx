@@ -1,8 +1,8 @@
-import { SIDEBAR_ITEMS } from "@/constants/sidebar_items";
+import { SIDEBAR_ITEMS } from "@/constants/Sidebar_items";
 import Image from "@/node_modules/next/image";
 import React from "react";
 import Icon from "../public/icon";
-import SidebarMenuGroup from "./sidebarMenuGroup";
+import SidebarMenuGroup from "./SidebarMenuGroup";
 
 const Sidebar = () => {
   return (

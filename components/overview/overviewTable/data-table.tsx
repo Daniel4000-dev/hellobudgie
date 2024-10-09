@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/table";
 // import { Button } from "@/components/ui/button";
 import { Key } from "react";
-import Button from "@/components/button";
+import Button from "@/components/Button";
 
 interface CustomerSupportTableProps<TData, TValue> {
     columns: ColumnDef<TValue, TValue>[]

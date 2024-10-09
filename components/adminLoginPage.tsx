@@ -1,8 +1,8 @@
-import { ADMINLOGIN_ITEMS } from "@/constants/adminLogin";
+import { ADMINLOGIN_ITEMS } from "@/constants/AdminLogin";
 import Image from "@/node_modules/next/image";
 import { adminLoginItems } from "@/types/types";
 import React from "react";
-import Button from "./button";
+import Button from "./Button";
 import Icon from "../public/icon"
 
 const AdminLoginPage = () => {
