@@ -1,17 +1,17 @@
-"use client";
+"use client"
+ 
+import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts"
+ 
 import {
-  BarChart,
-  Bar,
-  Rectangle,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
+  ChartConfig,
+  ChartContainer,
+  ChartLegend,
+  ChartLegendContent,
+  ChartTooltip,
+  ChartTooltipContent,
+} from "@/components/ui/chart"
 
-const data = [
+const chartData = [
   {
     name: "1st",
     uv: 2500,
@@ -116,36 +116,40 @@ const data = [
   },
 ];
 
+const chartConfig = {
+  desktop: {
+    label: "pv",
+    color: "#E8903D",
+  },
+  mobile: {
+    label: "uv",
+    color: "#040930",
+  },
+} satisfies ChartConfig
+
 export function Overview() {
   return (
-    <ResponsiveContainer width="100%" height={250}>
-      <BarChart
-        width={20}
-        height={300}
-        data={data}
-        margin={{
-          top: 5,
-          right: 30,
-          left: 20,
-          bottom: 5,
+    <ChartContainer config={chartConfig} className=" mx-auto h-[280px] w-full">
+    <BarChart accessibilityLayer data={chartData} barSize={6}>
+      <CartesianGrid vertical={false} horizontal={false} />
+      <XAxis
+        dataKey="name"
+        tickLine={false}
+        tickMargin={10}
+        axisLine={true}
+        tickFormatter={(value: any) => {
+          if (typeof value === 'string') {
+            return value.slice(0, 3); // Truncate the string to the first 3 characters
+          }
+          return value; // Return the value as-is if it's not a string
         }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Bar
-          dataKey="pv"
-          fill="#E8903D"
-          activeBar={<Rectangle fill="pink" stroke="red" />}
-        />
-        <Bar
-          dataKey="uv"
-          fill="#040930"
-          activeBar={<Rectangle fill="gold" stroke="gray" />}
-        />
-      </BarChart>
-    </ResponsiveContainer>
+      />
+      <YAxis />
+      <ChartTooltip content={<ChartTooltipContent />} />
+      <ChartLegend content={<ChartLegendContent />} />
+      <Bar dataKey="pv" fill="var(--color-desktop)" radius={[10, 10, 10, 10]} />
+      <Bar dataKey="uv" fill="var(--color-mobile)" radius={[10, 10, 10, 10]} />
+    </BarChart>
+  </ChartContainer>
   );
 }

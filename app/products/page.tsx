@@ -4,6 +4,7 @@ import React from "react";
 import { columns, Payment } from "./columns";
 import { ProductTable } from "./data-table";
 import Icon from '../../public/icon'
+import ProductInfo from "@/components/productInfo";
 
 async function getData(): Promise<Payment[]> {
     // Fetch data from your API here.
@@ -80,12 +81,12 @@ async function getData(): Promise<Payment[]> {
 const Products = async () => {
     const data = await getData();
   return (
-    <div className="flex-1 space-y4 p8">
+    <div className="flex-1 space-y4">
       <div>
         <Producthead />
       </div>
-      <div className="grid grid-cols-3 gap-4 p-8">
-        <div className="col-span-2 space-y-4 custom-scrollbar overflow-y-scroll  max-h-[600px]">
+      <div className="grid grid-cols-5 gap-4 pt-8">
+        <div className="col-span-3 space-y-4 custom-scrollbar overflow-y-scroll  max-h-[600px]">
           <div>
             <Card className="mb-4">
               <CardHeader>
@@ -100,13 +101,13 @@ const Products = async () => {
           </div>
         </div>
 
-        <div className="col-span-1 mb-4">
+        <div className="col-span-2 custom-scrollbar overflow-y-scroll  max-h-[600px] mb-4">
           <div className="w-full bg-white rounded-xl">
             <div>
               <h2 className="text-xl font-light p-4">MacBook Pro 14" M2 chip 2022</h2>
             </div>
-            <div className="w-full ">
-              {/* <ProductInfo /> */}
+            <div className="w-full p-4">
+              <ProductInfo />
             </div>
           </div>
         </div>

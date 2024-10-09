@@ -11,7 +11,7 @@ const OverviewProduct = () => {
           <div className="w-full border-b-[1px] border-gray-100 pb-1 overflowy hover:bg-gray-50" key={index}>
             <div className="p-3 flex gap-4 items-center">
               <div>
-                <Image src={Icon.Phone} />
+                <Image src={Icon.Phone} alt='Phone' />
               </div>
               <div className="flex flex-col">
                 <h2 className="text-sm">{item.title}</h2>

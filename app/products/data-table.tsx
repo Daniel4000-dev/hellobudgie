@@ -38,7 +38,7 @@ const customCellRenderer = (cell: { getValue: (arg0: string) => any; column: { i
   if((cell.column.id) === "productName") {
     return (
       <div className="flex items-center gap-4">
-        <Image src={icon} />
+        <Image src={icon} alt='Iphone' />
       <h2 className='text-sm line-clamp-1'>{name}</h2>
       </div>
     );

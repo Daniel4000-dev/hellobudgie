@@ -1,8 +1,8 @@
 import { SIDEBAR_ITEMS } from "@/constants/sidebar_items";
 import Image from "@/node_modules/next/image";
 import React from "react";
-import SidebarMenuGroup from "./sidebarmenugroup";
 import Icon from "../public/icon";
+import SidebarMenuGroup from "./sidebarMenuGroup";
 
 const Sidebar = () => {
   return (
@@ -10,8 +10,8 @@ const Sidebar = () => {
       <div className="h-screen w-[222px]">
         <div className="m-6 pb-10 flex items-center gap-1 ">
           <div className="flex">
-            <Image className="h-7 w-4" src={Icon.H} />
-            <Image className="-ml-[12px] mt-[3px] w-5" src={Icon.B} />
+            <Image className="h-7 w-4" src={Icon.H} alt='H' />
+            <Image className="-ml-[12px] mt-[3px] w-5" src={Icon.B} alt='B' />
           </div>
           <span className="text-white mt-2 text-2xl">hellobudgie</span>
         </div>
@@ -30,11 +30,11 @@ const Sidebar = () => {
 
           <div className="text-white ml-8 bottom-6 absolute flex flex-col gap-5">
             <div className="flex gap-2">
-              <Image src={Icon.DangerCircle} />
+              <Image src={Icon.DangerCircle} alt='Danger Circle' />
               <h2>Help center</h2>
             </div>
             <div className="flex gap-2">
-              <Image src={Icon.Logout} />
+              <Image src={Icon.Logout} alt='Logout' />
               <h2>Log out</h2>
             </div>
           </div>

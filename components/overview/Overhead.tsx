@@ -29,14 +29,14 @@ const Overhead = () => {
               />
               <span className="bg-[#E8903D] rounded-full text-white -ml[15.5vw] -ml-[103px] md:-ml-[106px]">
                 <div className="flex items-center gap-2 m-1.5 pl-2 pr-2">
-                  <Image className="w-4 h-4" src={Icon.Search} />
+                  <Image className="w-4 h-4" src={Icon.Search} alt='search' />
                   <h3>Search</h3>
                 </div>
               </span>
             </div>
-            <div className="flex gap-2 mr-6">
+            <div className="flex gap-2">
               <h2 className="whitespace-nowrap">Month</h2>
-              <Image src={Icon.ArrowDown} />
+              <Image src={Icon.ArrowDown} alt='arrow down' />
             </div>
           </div>
         </div>

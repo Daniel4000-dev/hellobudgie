@@ -16,6 +16,7 @@ import Logout from './logout.png'
 import Search from './search-normal.png'
 import Phone from './phone.png'
 import Laptop from './laptop.png'
+import LaptopView from './laptop-view.png'
 
 
 
@@ -37,5 +38,6 @@ export default {
     Logout,
     Search,
     Phone,
-    Laptop
+    Laptop,
+    LaptopView,
 }

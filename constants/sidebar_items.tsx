@@ -1,29 +1,22 @@
 import { SidebarItemGroup } from "@/types/types";
-import Overview from '../public/overview.png'
-import Products from '../public/products.png'
-import Orders from '../public/orders.png'
 import Icon from '../public/icon'
-import Admin from '../public/admin.png'
-import Delivery from '../public/delivery.png'
-import Help from '../public/help.png'
-
 export const SIDEBAR_ITEMS: SidebarItemGroup[] = [
 
     {
       menuList:[ {
         title: "Overview",
         path: "/",
-        icon: Overview,
+        icon: Icon.Overview,
       }, 
       {
         title: "Products",
         path: "/products",
-        icon: Products,
+        icon: Icon.Products,
       },
       {
         title: "Orders",
         path: "/orders",
-        icon: Orders,
+        icon: Icon.Orders,
       },
       {
           title: "Categories",
@@ -38,17 +31,17 @@ export const SIDEBAR_ITEMS: SidebarItemGroup[] = [
         {
           title: "Admin",
           path: "/admin",
-          icon: Admin
+          icon: Icon.Admin
         },
         {
           title: "Delivery Company",
           path: "/deliverycompany",
-          icon: Delivery,
+          icon: Icon.Delivery,
         },
         {
             title: "Help Centre",
             path: "/helpcentre",
-            icon: Help,
+            icon: Icon.Help,
           },
       ]
     }

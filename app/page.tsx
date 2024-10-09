@@ -12,8 +12,8 @@ export default function Home() {
       <div>
         <Overhead />
       </div>
-      <div className="grid grid-cols-3 gap-4 p-8">
-        <div className="col-span-2 space-y-4">
+      <div className="grid grid-cols-7 gap-4 pt-8">
+        <div className="col-span-5 space-y-4">
           <div>
             <OverviewSummary />
           </div>
@@ -21,13 +21,13 @@ export default function Home() {
           <div className="w-full">
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl font-light">
+                <div className="text-xl font-semibold">
                   Visitors vs Order
-                </CardTitle>
+                </div>
               </CardHeader>
-              <CardContent className="pl-2 overflow-x">
+              <div className=" overflow-x">
                 <Overview />
-              </CardContent>
+              </div>
             </Card>
           </div>
 
@@ -45,7 +45,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="col-span-1 mb-4">
+        <div className="col-span-2 mb-4">
           <div className="w-full bg-white rounded-xl">
             <div>
               <h2 className="text-xl font-light p-4">Top products</h2>

@@ -3,13 +3,13 @@ import Image from "@/node_modules/next/image";
 import { adminLoginItems } from "@/types/types";
 import React from "react";
 import Button from "./button";
-import Logo from "../public/logo.png"
+import Icon from "../public/icon"
 
 const AdminLoginPage = () => {
   return (
      <div className="bg-gray-50 min-h-screen">
         <div className="pl-4 pt-6 pb-[15vh]">
-            <Image src={Logo} />
+            <Image src={Icon.Logo} alt='logo' />
         </div>
         <div className="flex justify-center items-center">
             <div className="bg-white w-[70vw] md:w-[37vw] border-2 border-white rounded-xl shadow-lg pt-6">

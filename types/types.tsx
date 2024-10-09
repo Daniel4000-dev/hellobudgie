@@ -5,9 +5,14 @@ export type adminLoginItems = {
     placeholder: string;
 }
 
-export type button = {
+export type ButtonProps = {
     title?: string,
-    className?: string
+    className?: string,
+    variant?: string,
+    size?: string,
+    onClick?:() => void,
+    disabled?: boolean,
+    children?: React.ReactNode,
 }
 
 export type SidebarItemGroup = {
