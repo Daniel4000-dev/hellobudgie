@@ -1,4 +1,4 @@
-import { SIDEBAR_ITEMS } from "@/constants/Sidebar_items";
+import { SIDEBAR_ITEMS } from "@/constants/SidebarItems";
 import Image from "@/node_modules/next/image";
 import React from "react";
 import Icon from "../public/icon";

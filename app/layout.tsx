@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Pagewrapper from "../components/Pagewrapper";
+import Pagewrapper from "@/components/Pagewrapper";
 import Sidebar from "@/components/Sidebar";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
