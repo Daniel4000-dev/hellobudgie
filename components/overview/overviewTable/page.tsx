@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState } from 'react';
 import { Payment, columns } from "./Columns";
 import { DataTable } from "./Data-table";
