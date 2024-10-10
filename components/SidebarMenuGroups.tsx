@@ -1,6 +1,6 @@
 import { SidebarItemGroup } from '@/types/types'
 import React from 'react'
-import SidebarMenuItems from './SidebarMenuItems'
+import SidebarMenuItems from './SidebarMenuItem'
 
 const SidebarMenuGroup = ({menuGroup} : {menuGroup : SidebarItemGroup, className?: string}) => {
   return (
