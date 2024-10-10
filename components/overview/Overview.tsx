@@ -125,7 +125,7 @@ const chartConfig = {
     label: "uv",
     color: "#040930",
   },
-} satisfies ChartConfig
+} 
 
 export function Overview() {
   return (

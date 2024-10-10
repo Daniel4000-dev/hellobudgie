@@ -1,6 +1,7 @@
+import { useEffect, useState } from 'react';
 import { Payment, columns } from "./Columns";
 import { DataTable } from "./Data-table";
-import React from 'react'
+import React from 'react';
 
 async function getData(): Promise<Payment[]> {
   // Fetch data from your API here.
@@ -48,13 +49,23 @@ async function getData(): Promise<Payment[]> {
   ];
 }
 
-export default async function OverviewTable() {
-  const data = await getData()
+export default function OverviewTable() {
+  const [data, setData] = useState<Payment[]>([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const result = await getData();
+      setData(result);
+    }
+    
+    fetchData();
+  }, []);
+
   return (
     <div className='h-full pb4 bg-white rounded-lg'>
       <div className='-mt-6 mb6'>
-      <DataTable columns={columns} data={data} />
+        {data.length > 0 ? <DataTable columns={columns} data={data} /> : <p>Loading...</p>}
       </div>
     </div>
-  )
+  );
 }
