@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import React from 'react';
 
 import { DataTable } from "./DataTable";
-import { Columns, Payment } from "./Columns";
+import {  Columns, Payment } from "./Columns";
 async function getData(): Promise<Payment[]> {
   // Fetch data from your API here.
   return [
