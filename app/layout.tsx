@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "@/components/Head";
 import Pagewrapper from "@/components/Pagewrapper";
 import Sidebar from "@/components/Sidebar";
 import type { Metadata } from "next";
