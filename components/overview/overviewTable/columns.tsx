@@ -11,7 +11,7 @@ export type Payment = {
     date: string
   }
 
-  export const columns: ColumnDef<Payment>[] = [
+  export const Columns: ColumnDef<Payment>[] = [
     {
       id: 'orderId',
       accessorKey: "orderId",

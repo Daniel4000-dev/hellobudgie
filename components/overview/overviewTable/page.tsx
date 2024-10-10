@@ -1,10 +1,10 @@
 'use client'
 
-import { useEffect, useState } from 'react';
-import { Payment, columns } from "./Columns";
-import { DataTable } from "./Data-table";
+import { useState, useEffect } from "react";
 import React from 'react';
+import { Columns, Payment } from "./Columns";
 
+import { DataTable } from "./Data-table";
 async function getData(): Promise<Payment[]> {
   // Fetch data from your API here.
   return [
@@ -66,7 +66,7 @@ export default function OverviewTable() {
   return (
     <div className='h-full pb4 bg-white rounded-lg'>
       <div className='-mt-6 mb6'>
-        {data.length > 0 ? <DataTable columns={columns} data={data} /> : <p>Loading...</p>}
+        {data.length > 0 ? <DataTable columns={Columns} data={data} /> : <p>Loading...</p>}
       </div>
     </div>
   );

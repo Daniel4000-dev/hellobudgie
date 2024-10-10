@@ -1,5 +1,5 @@
 'use client'
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import classNames from 'classnames'
 
 const Pagewrapper = ({children} : {children : ReactNode}) => {
