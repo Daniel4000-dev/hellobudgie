@@ -1,4 +1,4 @@
-import { OVERVIEWPRODUCT_ITEMS } from "@/constants/Overviewproduct_items";
+import { OVERVIEWPRODUCT_ITEMS } from "@/constants/OverviewproductItems";
 import Image from "@/node_modules/next/image";
 import Icon from "../../public/icon";
 import React from "react";

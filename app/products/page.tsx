@@ -1,10 +1,10 @@
-import Producthead from "@/components/ProductHead";
+import Producthead from "@/components/ProductHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import React from "react";
 import { columns, Payment } from "./Column";
 import { ProductTable } from "./DataTable";
 import Icon from '../../public/icon'
-import ProductInfo from "@/components/ProductInfo";
+import ProductInfo from "@/components/ProductInfos";
 
 async function getData(): Promise<Payment[]> {
     // Fetch data from your API here.
