@@ -1,7 +1,7 @@
 import Icon from "../public/icon";
 import Image from "@/node_modules/next/image";
 
-const Header = () => {
+function Header() {
   return (
     <header className="fixed top-0 w-full z-40 bg-gray-50 pb-6 pl-[15.5rem]">
       <div className="flex flex-col items-center mx8 pb-2 pt-8 ">
