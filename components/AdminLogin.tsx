@@ -1,4 +1,4 @@
-import { ADMINLOGIN_ITEMS } from "@/constants/AdminLogin";
+import { ADMINLOGIN_ITEMS } from "@/constants/AdminLog";
 import Image from "@/node_modules/next/image";
 import { adminLoginItems } from "@/types/types";
 import React from "react";
