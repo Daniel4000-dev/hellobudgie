@@ -2,7 +2,7 @@ import { ADMINLOGIN_ITEMS } from "@/constants/AdminLogin";
 import Image from "@/node_modules/next/image";
 import { adminLoginItems } from "@/types/types";
 import React from "react";
-import Button from "./Button";
+import Button from "./Buttonn";
 import Icon from "../public/icon"
 
 const AdminLoginPage = () => {
