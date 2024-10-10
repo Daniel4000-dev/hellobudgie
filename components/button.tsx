@@ -1,7 +1,7 @@
 import { ButtonProps } from '@/types/types';
 import React from 'react';
 
-const Button = ({
+function Button({
   title = 'Save',
   className = '',
   variant,
@@ -9,7 +9,7 @@ const Button = ({
   onClick,
   disabled,
   children,
-}: ButtonProps) => {
+}: ButtonProps) {
   return (
     <button
       onClick={onClick}
