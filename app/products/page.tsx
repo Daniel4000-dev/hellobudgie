@@ -1,8 +1,8 @@
-import Producthead from "@/components/Producthead";
+import Producthead from "@/components/ProductHead";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import React from "react";
-import { columns, Payment } from "./Columns";
-import { ProductTable } from "./Data-table";
+import { columns, Payment } from "./Column";
+import { ProductTable } from "./DataTable";
 import Icon from '../../public/icon'
 import ProductInfo from "@/components/ProductInfo";
 
