@@ -1,6 +1,4 @@
-
-import { ColumnDef } from "@tanstack/react-table";
-import { OrdersColumnConfig } from "@/tableColumnConfig/ColumnConfig";
+import { OverviewColumnConfig } from "@/tableColumnConfig/ColumnConfig";
 
 const createColumnsFromConfig = (config: any[]) => config.map((c: { id: any; header: any; }) => ({
   accessorKey: c.id,
@@ -8,6 +6,6 @@ const createColumnsFromConfig = (config: any[]) => config.map((c: { id: any; hea
   cell: (info: { getValue: () => any; }) => String(info.getValue()),
 }));
 
-const columns = createColumnsFromConfig(OrdersColumnConfig);
+const columns = createColumnsFromConfig(OverviewColumnConfig);
 
 export { columns };

@@ -11,7 +11,7 @@ export default function Home() {
       <div>
         <OverHead />
       </div>
-      <div className="grid grid-cols-7 gap-4 pt-8 custom-scrollbar overflow-y-scroll">
+      <div className="grid grid-cols-7 gap-4 pt-4 custom-scrollbar overflow-y-scroll">
         <div className="col-span-5 space-y-4">
           <div>
             <OverviewSummary />

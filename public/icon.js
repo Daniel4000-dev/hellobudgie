@@ -20,6 +20,7 @@ import LaptopView from './laptop-view.png'
 import Speedaf from './speedaf.png'
 import UPS from './ups.png'
 import DHL from './dhl.png'
+import Add from './add.png'
 
 
 
@@ -46,4 +47,5 @@ export default {
     Speedaf,
     UPS,
     DHL,
+    Add,
 }
