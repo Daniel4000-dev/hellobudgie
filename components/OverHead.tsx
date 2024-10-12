@@ -1,11 +1,11 @@
 'use client'
 import React from 'react'
-import Icon from "../../public/icon";
+import Icon from "../public/icon";
 import Image from '@/node_modules/next/image';
 import { usePathname } from '@/node_modules/next/navigation';
 import { SIDEBAR_ITEMS } from '@/constants/SidebarItems';
 
-const Overhead = () => {
+const OverHead = () => {
     const currentRoute = usePathname();
   return (
     <div>
@@ -44,4 +44,4 @@ const Overhead = () => {
   )
 }
 
-export default Overhead
+export default OverHead

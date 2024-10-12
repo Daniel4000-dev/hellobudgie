@@ -1,11 +1,11 @@
 import { OVERVIEWPRODUCT_ITEMS } from "@/constants/OverviewproductItems";
 import Image from "@/node_modules/next/image";
-import Icon from "../../public/icon";
+import Icon from "../public/icon";
 import React from "react";
 
 const OverviewProduct = () => {
   return (
-    <div className="w-full h-[103vh] custom-scrollbar overflow-y-scroll -p-2">
+    <div className="w-full h-[1140px] custom-scrollbar overflow-y-scroll -p-2">
       <div className="fle gap-Z">
         {OVERVIEWPRODUCT_ITEMS.map((item, index) => (
           <div className="w-full border-b-[1px] border-gray-100 pb-1 overflowy hover:bg-gray-50" key={index}>

@@ -1,17 +1,17 @@
-import Overhead from "@/components/overview/Overhead";
-import { Overview } from "@/components/overview/Overview";
-import OverviewProduct from "@/components/overview/OverviewProduct";
-import OverviewTable  from "@/components/overview/overviewTable/page";
+import OverviewTable from "@/tableInterface/page";
+import { Overview } from "@/components/Overview";
+import OverviewProduct from "@/components/OverviewProduct";
 import OverviewSummary from "@/components/OverviewSummary";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import OverHead from "@/components/OverHead";
 
 export default function Home() {
   return (
     <div className="flex-1 space-y4 p8">
       <div>
-        <Overhead />
+        <OverHead />
       </div>
-      <div className="grid grid-cols-7 gap-4 pt-8">
+      <div className="grid grid-cols-7 gap-4 pt-8 custom-scrollbar overflow-y-scroll">
         <div className="col-span-5 space-y-4">
           <div>
             <OverviewSummary />
@@ -45,14 +45,14 @@ export default function Home() {
         </div>
 
         <div className="col-span-2 mb-4">
-          <div className="w-full bg-white rounded-xl">
+          <Card className="w-full bg-white rounded-xl">
             <div>
               <h2 className="text-xl font-light p-4">Top products</h2>
             </div>
             <div className="w-full">
               <OverviewProduct />
             </div>
-          </div>
+          </Card>
         </div>
       </div>
     </div>

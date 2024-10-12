@@ -6,15 +6,15 @@ import Image from "@/node_modules/next/image";
 import { usePathname } from '@/node_modules/next/navigation';
 import OverHead from './OverHead';
 
-const Producthead = () => {
+const AdminHead = () => {
     const currentRoute = usePathname();
   return (
     <div>
         <div className="">
-        <OverHead  />
+        <OverHead />
         </div>
     </div>
   )
 }
 
-export default Producthead
+export default AdminHead

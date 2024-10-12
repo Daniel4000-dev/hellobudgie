@@ -6,15 +6,15 @@ import Image from "@/node_modules/next/image";
 import { usePathname } from '@/node_modules/next/navigation';
 import OverHead from './OverHead';
 
-const Producthead = () => {
+const OrdersHead = () => {
     const currentRoute = usePathname();
   return (
     <div>
-        <div className="">
-        <OverHead  />
+        <div className="w-full pt-3 flex justify-between items-center ">
+        <OverHead />
         </div>
     </div>
   )
 }
 
-export default Producthead
+export default OrdersHead

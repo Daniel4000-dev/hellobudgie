@@ -7,8 +7,6 @@ import React from 'react'
 
 const SidebarMenuItems = ({item} : {item : SidebarItem}) => {
     const currentRoute = usePathname();
-    console.log(item.icon)
-
     const activeLink = 'text-gray-50 bg-[#E8903D] w- opacity-4 rounded-md';
     const inactiveLink = 'text-gray-400';
   return (

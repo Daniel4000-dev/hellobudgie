@@ -33,8 +33,58 @@ export type OverviewSummaryItem = {
     note: string;
 }
 
+export type OverviewTableProps = {
+    id: string;
+    orderId: string;
+    productName: string;
+    price: string;
+    quantity: string;
+    date: string;
+};
+
 export type OverviewProductItem = {
     title: string;
     price: string;
     piece: string;
+}
+
+export type OrdersTableProductName = {
+    icon?: StaticImageData;
+    name: string;
+  }
+
+export type OrdersTableProps = {
+    id: string;
+    orderId: string;
+    productName: OrdersTableProductName;
+    price: string;
+    quantity: string;
+    date: string;
+    status: string;
+}
+
+export type AdminTableProps = {
+    id: string;
+    adminId: string;
+    name: string;
+    title: string;
+    tier: string;
+    dateJoined: string;
+}
+
+export type DeliveryCompanyTableName = {
+    icon?: StaticImageData;
+    name: string;
+}
+
+export type DeliveryCompanyTableProps = {
+    id: string;
+    name: DeliveryCompanyTableName;
+    deliveryCompanyId: string;
+    dateAdded: string;
+    status: string;
+}
+
+export type DeliveryCompanyInfoProps = {
+    selectedCompany: any;
 }
