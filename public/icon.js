@@ -17,7 +17,7 @@ import Search from './search-normal.png'
 import Phone from './phone.png'
 import Laptop from './laptop.png'
 import LaptopView from './laptop-view.png'
-import Speedaf from './Speedaf.png'
+import Speedaf from './speedaf.png'
 import UPS from './ups.png'
 import DHL from './dhl.png'
 
