@@ -16,7 +16,7 @@ body {
     background: transparent;  /* Optional: Just in case */
   }
 
-  tr:hover {
+  tbody tr:hover {
     background-color: #FFF8F1 !important;
   }
 }
