@@ -15,6 +15,10 @@ body {
     width: 0px;  /* Remove scrollbar space */
     background: transparent;  /* Optional: Just in case */
   }
+
+  tr:hover {
+    background-color: #FFF8F1 !important;
+  }
 }
 
 @layer base {

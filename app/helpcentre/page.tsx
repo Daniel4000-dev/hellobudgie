@@ -2,9 +2,9 @@
 
 import OverHead from '@/components/OverHead';
 import { Card } from "@/components/ui/card";
-import DeliverCompanyTableWrapper from '@/components/DeliveryCompanyTableWrapper';
-import DeliveryCompanyInfo from '@/components/DeliveryCompanyInfos';
 import React, { useState } from 'react';
+import HelpCenterTableWrapper from '@/components/HelpCenterTableWrapper';
+import HelpCenterInfo from '@/components/HelpCenterInfos';
 
 const DeliveryCompany = () => {
   const [selectedCompany, setSelectedCompany] = useState<any>(null);
@@ -21,13 +21,13 @@ const DeliveryCompany = () => {
 
       <div className="pt-4">
         <div className="flex gap-4">
-          <Card className={`flex-1 custom-scrollbar overflow-y-auto ${selectedCompany ? 'w-3/4' : 'w-full'}`}>
-            <DeliverCompanyTableWrapper onRowClick={handleRowClick} />
+          <Card className={`flex-1 custom-scrollbar overflow-y-auto ${selectedCompany ? 'w-2/3' : 'w-full'}`}>
+            <HelpCenterTableWrapper onRowClick={handleRowClick} />
           </Card>
 
           {selectedCompany && (
-            <Card className="w-1/4 max-h-[350px] custom-scrollbar overflow-y-auto">
-              <DeliveryCompanyInfo selectedCompany={selectedCompany} />
+            <Card className="w-1/3 max-h-[600px] custom-scrollbar overflow-y-auto">
+              <HelpCenterInfo selectedCompany={selectedCompany} />
             </Card>
           )}
         </div>

@@ -3,6 +3,7 @@ import {
   OrdersTableProps,
   OverviewTableProps,
   DeliveryCompanyTableProps,
+  HelpCenterTableProps,
 } from "@/types/types";
 import Icon from "../public/icon";
 
@@ -185,48 +186,34 @@ export const DELIVERYCOMPANYTABLE_ITEMS: DeliveryCompanyTableProps[] = [
     dateAdded: "12/02/2022",
     status: "Active",
   },
-  {
-    id: "m5gr84i9",
-    name: { icon: Icon.Speedaf, name: "Speedaf" },
-    deliveryCompanyId: "#57823",
-    dateAdded: "12/02/2022",
-    status: "Suspended",
-  },
-  {
-    id: "m5g584i9",
-    name: { icon: Icon.UPS, name: "ups" },
-    deliveryCompanyId: "#57823",
-    dateAdded: "12/02/2022",
-    status: "Active",
-  },
-  {
-    id: "m5gr84l9",
-    name: { icon: Icon.DHL, name: "DHL" },
-    deliveryCompanyId: "#57823",
-    dateAdded: "12/02/2022",
-    status: "Active",
-  },
-  {
-    id: "m5gr84i9",
-    name: { icon: Icon.Speedaf, name: "Speedaf" },
-    deliveryCompanyId: "#57823",
-    dateAdded: "12/02/2022",
-    status: "Suspended",
-  },
-  {
-    id: "m5g584i9",
-    name: { icon: Icon.UPS, name: "ups" },
-    deliveryCompanyId: "#57823",
-    dateAdded: "12/02/2022",
-    status: "Active",
-  },
-  {
-    id: "m5gr84l9",
-    name: { icon: Icon.DHL, name: "DHL" },
-    deliveryCompanyId: "#57823",
-    dateAdded: "12/02/2022",
-    status: "Active",
-  },
+  
 ];
+
+export const HELPCENTERTABLE_ITEMS: HelpCenterTableProps[] = [
+  {
+    id: "m5e4i4d9",
+    orderId: "#57823",
+    subject: "lack of access to purchase item",
+    email: "email@example.com",
+    name: "James Eli",
+    date: "29/01/2020",
+  },
+  {
+    id: "m5e4i4d9",
+    orderId: "#57823",
+    subject: "lack of access to purchase item",
+    email: "customeremail@example.com",
+    name: "Celi Omar",
+    date: "29/01/2020",
+  },
+  {
+    id: "m5e4i2d9",
+    orderId: "#57823",
+    subject: "lack of access to purchase item",
+    email: "email@example.com",
+    name: "Celi Omar",
+    date: "29/01/2020",
+  },
+]
 
 

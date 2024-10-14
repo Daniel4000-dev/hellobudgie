@@ -29,3 +29,11 @@ export const OverviewColumnConfig = [
     { id: 'dateAdded', header: 'Date Added' },
     { id: 'status', header: 'Status' },
   ]
+
+  export const HelpCenterColumnConfig = [
+    { id: 'orderId', header: 'OrderID'},
+    { id: 'subject', header: 'Subject'},
+    { id: 'email', header: 'Emial address'},
+    { id: 'name', header: 'Name'},
+    { id: 'date', header: 'Date'}
+  ]

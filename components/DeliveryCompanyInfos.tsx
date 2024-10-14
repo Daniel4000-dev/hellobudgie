@@ -5,9 +5,6 @@ import Icon from "../public/icon"; // Make sure the icon path is correct
 import { DeliveryCompanyInfoProps } from "@/types/types";
 
 const DeliveryCompanyInfo: React.FC<DeliveryCompanyInfoProps> = ({ selectedCompany }) => {
-  if (!selectedCompany) {
-    return <p>Please select a company to see details.</p>;
-  }
 
   return (
     <div className="flex flex-col p-4 min-h-[100px] max-h-[600px] custom-scrollbar overflow-y-scroll">

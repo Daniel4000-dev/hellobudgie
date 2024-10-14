@@ -29,9 +29,9 @@ export const GenericTable = <TData,>({ columns, data, onRowClick }: GenericTable
           </TableRow>
         ))}
       </TableHeader>
-      <TableBody>
+      <TableBody className="hover:bg-black table-row">
         {table.getRowModel().rows.map(row => (
-          <TableRow key={row.id} onClick={() => onRowClick?.(row.original)} className="cursor-pointer">
+          <TableRow key={row.id} onClick={() => onRowClick?.(row.original)} className="cursor-pointer hover:bg-gray-300 bg[#FFF8F1]">
             {row.getVisibleCells().map(cell => (
               <TableCell key={cell.id}>
                 {flexRender(cell.column.columnDef.cell, cell.getContext())}

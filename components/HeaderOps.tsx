@@ -1,10 +1,9 @@
 import Image from "@/node_modules/next/image";
 import React from "react";
 import Icon from "../public/icon";
-import AddDeliveryCompany from "./AddDeliveryCompany";
+import { AddDeliveryCompanyButton } from "./AddDeliveryCompanyButton";
 
 const HeaderOps = ({ currentPath }: { currentPath: string }) => {
-
   const renderHeaderOps = () => {
     switch (currentPath) {
       case "/":
@@ -30,17 +29,17 @@ const HeaderOps = ({ currentPath }: { currentPath: string }) => {
       case "/deliverycompany":
         return (
         <div>
-            <AddDeliveryCompany />
+            <AddDeliveryCompanyButton />
         </div>
         );
       case "/helpcentre":
-        return <h2 className="whitespace-nowrap">Support</h2>;
+        return <h2 className="whitespace-nowrap"></h2>;
       default:
         return null;
     }
   };
 
-  return <div>{renderHeaderOps()}</div>;
+  return <div className={`${currentPath === "/helpcentre" ? "mr-0": "pl-5"}`}>{renderHeaderOps()}</div>;
 };
 
 export default HeaderOps;

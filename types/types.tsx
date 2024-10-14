@@ -15,6 +15,11 @@ export type ButtonProps = {
     children?: React.ReactNode,
 }
 
+export type deliveryCompanyButtonItems = {
+    title: string;
+    placeholder: string;
+}
+
 export type SidebarItemGroup = {
     title?: string;
     menuList: SidebarItem[];
@@ -87,4 +92,13 @@ export type DeliveryCompanyTableProps = {
 
 export type DeliveryCompanyInfoProps = {
     selectedCompany: any;
+}
+
+export type HelpCenterTableProps = {
+    id: string;
+    orderId: string;
+    subject: string;
+    email: string;
+    name: string;
+    date: string;
 }

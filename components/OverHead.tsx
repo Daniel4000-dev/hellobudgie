@@ -13,8 +13,8 @@ const OverHead = () => {
     <div>
         <div className="w-full pt-3 flex justify-between items-center ">
             <HeaderName />
-          <div className="flex items-center gap-6">
-           <HeaderSearch  currentPath={currentPath} />
+          <div className="flex items-center">
+           <HeaderSearch  currentPath={currentPath}/>
             <HeaderOps currentPath={currentPath} />
           </div>
         </div>
