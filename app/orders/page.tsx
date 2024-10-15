@@ -48,9 +48,6 @@ const Orders = () => {
         <div className="col-span-5 space-y-4 custom-scrollbar overflow-y-scroll  max-h-[600px]">
           <div>
             <Card className="mb-4">
-              <div>
-                <div className="text-xl font-light">Recent Invoices</div>
-              </div>
               <Tabs defaultValue='allOrders' className="flex flex-col">
                 <div className='flex justify-between items-center'>
                 <TabsList className="flex justify-start gap-4 w-full bg-white">
