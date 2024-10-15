@@ -1,11 +1,9 @@
-'use client'
-
-import { columns } from '@/app/orders/Column';
+// import { columns } from '@/app/orders/Column';
 import { GenericTable } from '@/tableInterface/DataTable';
 import { ORDERSTABLE_ITEMS } from '@/constants/Tableitems';
 import React from 'react'
 
-const OrdersTableWrapper = () => {
+const OrdersTableWrapper = ({ columns } : { columns: any[] }) => {
     return (
         <div className="h-[600px] pb-4 bg-white rounded-lg">
           {ORDERSTABLE_ITEMS.length > 0 ? (

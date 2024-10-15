@@ -21,6 +21,8 @@ import Speedaf from './speedaf.png'
 import UPS from './ups.png'
 import DHL from './dhl.png'
 import Add from './add.png'
+import View from './view.png'
+import Menu from './menu.png'
 
 
 
@@ -48,4 +50,6 @@ export default {
     UPS,
     DHL,
     Add,
+    View,
+    Menu,
 }
