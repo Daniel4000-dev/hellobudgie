@@ -98,6 +98,9 @@ export const ORDERSTABLE_ITEMS: OrdersTableProps[] = [
     price: "₦1,400,000",
     quantity: "1",
     date: "12/02/2022",
+    customerName: 'Mark Runs',
+    customerEmail: 'markruns@gmail.com',
+    deliveryBy: { icon: Icon.DHL, name: 'DHL' },
     status: "In progress",
   },
   {
@@ -107,6 +110,9 @@ export const ORDERSTABLE_ITEMS: OrdersTableProps[] = [
     price: "₦1,400,000",
     quantity: "1",
     date: "12/02/2022",
+    customerName: 'Mark Runs',
+    customerEmail: 'markruns@gmail.com',
+    deliveryBy: { icon: Icon.DHL, name: 'DHL' },
     status: "In progress",
   },
   {
@@ -116,6 +122,9 @@ export const ORDERSTABLE_ITEMS: OrdersTableProps[] = [
     price: "₦1,400,000",
     quantity: "1",
     date: "12/02/2022",
+    customerName: 'Mark Runs',
+    customerEmail: 'markruns@gmail.com',
+    deliveryBy: { icon: Icon.DHL, name: 'DHL' },
     status: "Delivered",
   },
   {
@@ -125,6 +134,9 @@ export const ORDERSTABLE_ITEMS: OrdersTableProps[] = [
     price: "₦1,400,000",
     quantity: "1",
     date: "12/02/2022",
+    customerName: 'Mark Runs',
+    customerEmail: 'markruns@gmail.com',
+    deliveryBy: { icon: Icon.DHL, name: 'DHL' },
     status: "Delivered",
   },
 ];

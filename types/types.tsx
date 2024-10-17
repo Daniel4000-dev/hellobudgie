@@ -58,13 +58,21 @@ export type OrdersTableProductName = {
     name: string;
   }
 
+  export type OrdersTableDeliveryBy ={
+    icon?: StaticImageData;
+    name: string;
+  }
+
 export type OrdersTableProps = {
     id: string;
     orderId: string;
     productName: OrdersTableProductName;
     price: string;
     quantity: string;
-    date: string;
+    date?: string;
+    customerName?: string;
+    customerEmail?: string;
+    deliveryBy: OrdersTableDeliveryBy;
     status: string;
 }
 
