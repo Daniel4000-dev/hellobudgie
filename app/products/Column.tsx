@@ -7,7 +7,7 @@ const createColumnsFromConfig = (config: any[]) => config.map((c) => ({
   cell: (info: { getValue: () => any; }) => {
     const value = info.getValue(); 
 
-    if (c.id === "name") {
+    if (c.id === "productName") {
       if (value && value.icon && value.name) {
         return (
           <div style={{ display: "flex", alignItems: "center" }}>

@@ -73,7 +73,14 @@ export type ProductTableProps = {
     productName: ProductTableProductName,
     price: string
     quantity: string
+    status?: string
   }
+
+export type ProductTableWrapperProps = {
+    columns: any[];
+    data: any[];
+    onRowClick: (rowData: any) => void;
+}
 
   export type OrdersTableDeliveryBy ={
     icon?: StaticImageData;

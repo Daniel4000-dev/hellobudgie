@@ -97,66 +97,77 @@ export const PRODUCTTABLE_ITEMS: ProductTableProps[] = [
     productName: {icon: Icon.Laptop, name:'MacBook Pro 14" M2 chip 2022'},
     price: "₦1,400,000",
     quantity: '1',
+    status: 'Approved'
   },
   {
     productId: "m5e4i4i9",
     productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
     price: "₦1,400,000",
     quantity: '1',
+    status: 'Approved'
   },
   {
     productId: "m5e4i4i9",
     productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
     price: "₦1,400,000",
     quantity: '1',
+    status: 'Pending Approval'
   },
    {
     productId: "m5e4i4i9",
     productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
     price: "₦1,400,000",
     quantity: '1',
+    status: 'Pending Approval'
   },
    {
     productId: "m5e4i4i9",
     productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
     price: "₦1,400,000",
     quantity: '1',
+    status: 'Pending Approval'
   },
   {
     productId: "m5e4i4i9",
     productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
     price: "₦1,400,000",
     quantity: '1',
+    status: 'Pending Approval'
   },
    {
     productId: "m5e4i4i9",
     productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
     price: "₦1,400,000",
     quantity: '1',
+    status: 'Pending Approval'
   },
    {
     productId: "m5e4i4i9",
     productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
     price: "₦1,400,000",
     quantity: '1',
+    status: 'Disapproved'
   },
   {
     productId: "m5e4i4i9",
     productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
     price: "₦1,400,000",
     quantity: '1',
+    status: 'Disapproved'
   },
   {
     productId: "m5e4i4i9",
     productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
     price: "₦1,400,000",
     quantity: '1',
+    status: 'Disapproved'
   },
   {
     productId: "m5e4i4i9",
     productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
     price: "₦1,400,000",
     quantity: '1',
+    status: 'Disapproved'
   },
 ]
 
