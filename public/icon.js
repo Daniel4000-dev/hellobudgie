@@ -23,6 +23,8 @@ import DHL from './dhl.png'
 import Add from './add.png'
 import View from './view.png'
 import Menu from './menu.png'
+import Delete from './delete.png'
+import Arrow from './arrow-right.png'
 
 
 
@@ -52,4 +54,6 @@ export default {
     Add,
     View,
     Menu,
+    Delete,
+    Arrow
 }

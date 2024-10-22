@@ -1,34 +1,34 @@
-"use client";
+import { ProductColumnConfig } from "@/tableColumnConfig/ColumnConfig";
+import Image from "next/image";
 
-import { StaticImageData } from "@/node_modules/next/image";
-import { ColumnDef } from "@tanstack/react-table";
+const createColumnsFromConfig = (config: any[]) => config.map((c) => ({
+  accessorKey: c.id,
+  header: c.header,
+  cell: (info: { getValue: () => any; }) => {
+    const value = info.getValue(); 
 
-export type Payment = {
-    id: string,
-    productName: Pay,
-    price: string
-    quantity: string
-  }
+    if (c.id === "name") {
+      if (value && value.icon && value.name) {
+        return (
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <Image
+              src={value.icon.src}
+              alt={value.name}
+              width={40}
+              height={40}
+  priority
+            />
+            <span style={{ marginLeft: "10px" }}>{value.name}</span>
+          </div>
+        );
+      }
+      return "No product details";
+    }
 
-  export type Pay = {
-    icon?: StaticImageData;
-    name: string;
-  }
+    return String(value);
+  },
+}));
 
-  export const columns: ColumnDef<Payment>[] = [
-    {
-      id: 'productName',
-      accessorKey: "productName",
-      header: "Product name",
-    },
-    {
-      id: 'price',
-      accessorKey: "price",
-      header: "Price",
-    },
-    {
-      id: 'quantity',
-      accessorKey: "quantity",
-      header: "Quantity",
-    },
-  ]
+const columns = createColumnsFromConfig(ProductColumnConfig);
+
+export { columns };

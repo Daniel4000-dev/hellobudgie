@@ -15,6 +15,11 @@ export type ButtonProps = {
     children?: React.ReactNode,
 }
 
+export type AdminButtonItems = {
+    title: string;
+    placeholder: string;
+}
+
 export type deliveryCompanyButtonItems = {
     title: string;
     placeholder: string;
@@ -56,6 +61,18 @@ export type OverviewProductItem = {
 export type OrdersTableProductName = {
     icon?: StaticImageData;
     name: string;
+  }
+
+export type ProductTableProductName = {
+    icon?: StaticImageData;
+    name: string;
+  }
+
+export type ProductTableProps = {
+    productId: string,
+    productName: ProductTableProductName,
+    price: string
+    quantity: string
   }
 
   export type OrdersTableDeliveryBy ={

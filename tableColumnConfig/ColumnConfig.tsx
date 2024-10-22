@@ -6,6 +6,12 @@ export const OverviewColumnConfig = [
     { id: 'date', header: 'Date' },
   ];
 
+export const ProductColumnConfig = [
+    { id: 'productName', header: "Product name" },
+    { id: 'price', header: "Price" },
+    { id: 'quantity', header: "Quantity" },
+  ]
+
   export const OrdersColumnConfig = [
     { id: 'orderId', header: 'Order ID' },
     { id: 'productName', header: 'Product Name' },

@@ -10,7 +10,7 @@ import {
 } from "./ui/select";
 import Icon from "../public/icon";
 
-const ProductInfo = () => {
+const ProductInfo = ({ selectedCompany }: {selectedCompany: any}) => {
   return (
     <div className="flex flex-col">
       <div>

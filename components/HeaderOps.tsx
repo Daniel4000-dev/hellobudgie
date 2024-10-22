@@ -1,6 +1,7 @@
 import Image from "@/node_modules/next/image";
 import React from "react";
 import Icon from "../public/icon";
+import { AddAdminButton } from "./AddAdminButton";
 import { AddDeliveryCompanyButton } from "./AddDeliveryCompanyButton";
 import { AddProductButton } from "./AddProductButton";
 
@@ -25,7 +26,11 @@ const HeaderOps = ({ currentPath }: { currentPath: string }) => {
       case "/categories":
         return <h2 className="whitespace-nowrap">Product Category</h2>;
       case "/admin":
-        return <h2 className="whitespace-nowrap">Admin Settings</h2>;
+        return (
+        <div>
+          <AddAdminButton />
+        </div>
+        );
       case "/deliverycompany":
         return (
         <div>

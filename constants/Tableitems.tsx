@@ -4,6 +4,7 @@ import {
   OverviewTableProps,
   DeliveryCompanyTableProps,
   HelpCenterTableProps,
+  ProductTableProps,
 } from "@/types/types";
 import Icon from "../public/icon";
 
@@ -89,6 +90,75 @@ export const OVERVIEWTABLE_ITEMS: OverviewTableProps[] = [
     date: "29/01/2020",
   },
 ];
+
+export const PRODUCTTABLE_ITEMS: ProductTableProps[] = [
+  {
+    productId: "m5gr84i9",
+    productName: {icon: Icon.Laptop, name:'MacBook Pro 14" M2 chip 2022'},
+    price: "₦1,400,000",
+    quantity: '1',
+  },
+  {
+    productId: "m5e4i4i9",
+    productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
+    price: "₦1,400,000",
+    quantity: '1',
+  },
+  {
+    productId: "m5e4i4i9",
+    productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
+    price: "₦1,400,000",
+    quantity: '1',
+  },
+   {
+    productId: "m5e4i4i9",
+    productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
+    price: "₦1,400,000",
+    quantity: '1',
+  },
+   {
+    productId: "m5e4i4i9",
+    productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
+    price: "₦1,400,000",
+    quantity: '1',
+  },
+  {
+    productId: "m5e4i4i9",
+    productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
+    price: "₦1,400,000",
+    quantity: '1',
+  },
+   {
+    productId: "m5e4i4i9",
+    productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
+    price: "₦1,400,000",
+    quantity: '1',
+  },
+   {
+    productId: "m5e4i4i9",
+    productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
+    price: "₦1,400,000",
+    quantity: '1',
+  },
+  {
+    productId: "m5e4i4i9",
+    productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
+    price: "₦1,400,000",
+    quantity: '1',
+  },
+  {
+    productId: "m5e4i4i9",
+    productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
+    price: "₦1,400,000",
+    quantity: '1',
+  },
+  {
+    productId: "m5e4i4i9",
+    productName: {icon: Icon.Laptop, name:"MacBook Pro 2022"},
+    price: "₦1,400,000",
+    quantity: '1',
+  },
+]
 
 export const ORDERSTABLE_ITEMS: OrdersTableProps[] = [
   {

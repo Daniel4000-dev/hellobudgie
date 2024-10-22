@@ -1,9 +1,8 @@
 import { GenericTable } from '@/tableInterface/DataTable';
 import { DELIVERYCOMPANYTABLE_ITEMS } from '@/constants/Tableitems';
 import React from 'react'
-import { columns } from '@/app/deliverycompany/Column';
 
-const DeliverCompanyTableWrapper = ({ onRowClick }: { onRowClick: (rowData: any) => void }) => {
+const DeliveryCompanyTableWrapper = ({ columns, onRowClick } : { columns: any[], onRowClick: (rowData: any) => void }) => {
   return (
     <div className="flex flex-col gap-4 pb4">
       <div className="custom-scrollbar overflow-y-auto max-h-[600px]">
@@ -17,4 +16,4 @@ const DeliverCompanyTableWrapper = ({ onRowClick }: { onRowClick: (rowData: any)
   );
 }
 
-export default DeliverCompanyTableWrapper;
+export default DeliveryCompanyTableWrapper;
