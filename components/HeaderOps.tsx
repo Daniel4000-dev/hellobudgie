@@ -4,6 +4,7 @@ import Icon from "../public/icon";
 import { AddAdminButton } from "./AddAdminButton";
 import { AddDeliveryCompanyButton } from "./AddDeliveryCompanyButton";
 import { AddProductButton } from "./AddProductButton";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 
 const HeaderOps = ({ currentPath }: { currentPath: string }) => {
   const renderHeaderOps = () => {
@@ -17,7 +18,22 @@ const HeaderOps = ({ currentPath }: { currentPath: string }) => {
         );
       case "/products":
         return (
-          <div>
+          <div className="flex gap-4 items-center">
+            <div>
+            <Select>
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Sort by" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="Order ID">Order ID</SelectItem>
+                    <SelectItem value="Product Name">Product Name</SelectItem>
+                    <SelectItem value="Price">Price</SelectItem>
+                    <SelectItem value="Quantity">Quantity</SelectItem>
+                    <SelectItem value="Date">Date</SelectItem>
+                    <SelectItem value="Status">Status</SelectItem>
+                  </SelectContent>
+                </Select>
+            </div>
             <AddProductButton />
         </div>
         );

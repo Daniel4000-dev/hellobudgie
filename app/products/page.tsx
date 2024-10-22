@@ -60,7 +60,7 @@ const Product = () => {
       <div className="flex gap-4">
         <Card
           className={`flex-1 mb-4 custom-scrollbar overflow-y-auto ${
-            selectedCompany ? "w-3/4" : "w-full"
+            selectedCompany ? "w-3/5" : "w-full"
           }`}
         >
           <Tabs defaultValue="allOrders" className="flex flex-col">
@@ -139,7 +139,7 @@ const Product = () => {
         </Card>
 
         {selectedCompany && (
-          <Card className="w-1/4 max-h-[550px] custom-scrollbar overflow-y-auto mb-4">
+          <Card className="w-2/5 max-h-[550px] custom-scrollbar overflow-y-auto mb-4">
             <ProductInfo selectedCompany={selectedCompany} />
           </Card>
         )}

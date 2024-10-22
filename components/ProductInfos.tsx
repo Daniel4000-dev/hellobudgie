@@ -9,12 +9,13 @@ import {
   SelectValue,
 } from "./ui/select";
 import Icon from "../public/icon";
+import { ResizableImageGallery } from "./ResizableImageGallery";
 
 const ProductInfo = ({ selectedCompany }: {selectedCompany: any}) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col p-4">
       <div>
-        <Image src={Icon.LaptopView} alt="" />
+       <ResizableImageGallery />
       </div>
 
       <div>
