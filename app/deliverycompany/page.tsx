@@ -13,15 +13,12 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { columns as defaultColumns } from "./Column";
-import OrdersTableWrapper from "@/components/OrdersTableWrapper";
-import OrdersTableGridWrapper from "@/components/OrdersTableGridWrapper";
 import OrdersInfo from "@/components/OrdersInfos";
-import { ADMINTABLE_ITEMS, DELIVERYCOMPANYTABLE_ITEMS, ORDERSTABLE_ITEMS } from "@/constants/Tableitems";
+import { DELIVERYCOMPANYTABLE_ITEMS } from "@/constants/Tableitems";
 import OverHead from "@/components/OverHead";
-import AdminTableWrapper from "@/components/AdminTableWrapper";
-import AdminTableGridWrapper from "@/components/AdminTableGridWrapper";
 import DeliveryCompanyTableWrapper from "@/components/DeliveryCompanyTableWrapper";
 import DeliveryCompanyTableGridWrapper from "@/components/DeliveryCompanyTableGridWrapper";
+import DeliveryCompanyInfo from "@/components/DeliveryCompanyInfos";
 
 const DeliveryCompany = () => {
   const [orderTab, setOrderTab] = useState("allOrders");
@@ -178,7 +175,7 @@ const DeliveryCompany = () => {
 
         {selectedCompany && (
           <Card className="w-2/5 max-h-[650px] custom-scrollbar overflow-y-auto mb-4">
-            <OrdersInfo selectedCompany={selectedCompany} />
+            <DeliveryCompanyInfo selectedCompany={selectedCompany} />
           </Card>
         )}
       </div>
