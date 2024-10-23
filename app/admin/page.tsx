@@ -174,7 +174,7 @@ const Admin = () => {
         </Card>
 
         {selectedCompany && (
-          <Card className="w-2/5 max-h-[650px] custom-scrollbar overflow-y-auto mb-4">
+          <Card className="w-2/5 max-h-[350px] custom-scrollbar overflow-y-auto mb-4">
             <AdminInfo selectedCompany={selectedCompany} />
           </Card>
         )}
