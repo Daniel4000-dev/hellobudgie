@@ -12,12 +12,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { columns as defaultColumns } from "./Column"; // Columns configuration
+import { columns as defaultColumns } from "./Column";
 import ProductInfo from "@/components/ProductInfos";
-import ProductTableWrapper from "@/components/ProductTableWrapper"; // Component to display the product table
-import Producthead from "@/components/ProductHeader";
-import { PRODUCTTABLE_ITEMS } from "@/constants/Tableitems"; // Product data
+import ProductTableWrapper from "@/components/ProductTableWrapper";
+import { PRODUCTTABLE_ITEMS } from "@/constants/Tableitems";
 import ProductTableGridWrapper from "@/components/ProductTableGridWrapper";
+import OverHead from "@/components/OverHead";
 
 const Product = () => {
   const [orderTab, setOrderTab] = useState("allOrders");
@@ -56,7 +56,7 @@ const Product = () => {
   return (
     <div className="flex-1 space-y4">
       <div>
-        <Producthead />
+        <OverHead />
       </div>
       <div className="flex gap-4">
         <Card

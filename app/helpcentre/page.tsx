@@ -3,21 +3,15 @@
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useEffect, useState } from "react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { columns as defaultColumns } from "./Column";
+import OrdersInfo from "@/components/OrdersInfos";
+import { HELPCENTERTABLE_ITEMS } from "@/constants/Tableitems";
 import OverHead from "@/components/OverHead";
-import HelpCenterInfo from "@/components/HelpCenterInfos";
 import HelpCenterTableWrapper from "@/components/HelpCenterTableWrapper";
+import HelpCenterInfo from "@/components/HelpCenterInfos";
 
-const Product = () => {
-  const [orderTab, setOrderTab] = useState("allOrdders");
-  const [viewType, setViewType] = useState("view");
+const HelpCenter = () => {
+  const [orderTab, setOrderTab] = useState("Pending disputes");
   const [columns, setColumns] = useState(defaultColumns);
   const [selectedCompany, setSelectedCompany] = useState<any>(null);
 
@@ -25,27 +19,13 @@ const Product = () => {
     setSelectedCompany(rowData);
   };
 
-  const toggleViewType = () => {
-    setViewType((prevView) => (prevView === "view" ? "grid" : "view"));
-  };
   const handleOrderTabChange = (value: string) => {
     setOrderTab(value);
   };
 
-  const handleColumnSort = (selcetedHeader: string) => {
-    const reorderedColumns = [...defaultColumns];
-    const index = reorderedColumns.findIndex(
-      (col) => col.header === selcetedHeader
-    );
-    if (index !== -1) {
-      const [selectedColumn] = reorderedColumns.splice(index, 1);
-      reorderedColumns.unshift(selectedColumn);
-    }
-    setColumns(reorderedColumns);
-  };
 
   useEffect(() => {
-    setOrderTab("allOrders");
+    setOrderTab("pendingDisputes");
   }, []);
 
   return (
@@ -56,77 +36,57 @@ const Product = () => {
       <div className="flex gap-4">
         <Card
           className={`flex-1 mb-4 custom-scrollbar overflow-y-auto ${
-            selectedCompany ? "w-3/4" : "w-full"
+            selectedCompany ? "w-3/5" : "w-full"
           }`}
         >
-          <Tabs defaultValue="allOrders" className="flex flex-col">
+          <Tabs defaultValue="allOrders" className="flex flex-col" value={orderTab} onValueChange={handleOrderTabChange}>
             <div className="flex justify-between items-center">
-              <TabsList className="flex justify-start gap-4 w-full bg-white">
+              <TabsList className="flex justify-start w-full bg-white">
+              <div className='border-r-[1px] pr-1'>
                 <TabsTrigger
-                  className={`text-[#E8903D] border-b-2 border-[#E8903D] rounded-none ${
-                    orderTab === "allOrders" ? "active-tab-class" : ""
+                  className={`rounded-none ${
+                    orderTab === "pendingDisputes" ? "active-tab-class text-[#E8903D] border-b-2 border-[#E8903D]" : ""
                   }`}
-                  onClick={() => handleOrderTabChange("allOrders")}
-                  value="allOrders"
+                  value="pendingDisputes"
                 >
-                  All orders
+                  Pending disputes
                 </TabsTrigger>
+                </div>
                 <TabsTrigger
-                  onClick={() => handleOrderTabChange("inProgress")}
-                  value="inProgress"
+                  value="solvedDisputes"
+                  className={orderTab === "solvedDisputes" ? "active-tab-class text-[#E8903D] border-b-2 border-[#E8903D] rounded-none" : ""}
                 >
-                  In progress
+                 Solved disputes
                 </TabsTrigger>
-                <TabsTrigger
-                  onClick={() => handleOrderTabChange("delivered")}
-                  value="delivered"
-                >
-                  Delivered
-                </TabsTrigger>
-              </TabsList>
-              <TabsList className="flex justify-end gap-4 w-full bg-white">
-                <Select onValueChange={handleColumnSort}>
-                  <SelectTrigger className="w-[180px]">
-                    <SelectValue placeholder="Sort by" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="Order ID">Order ID</SelectItem>
-                    <SelectItem value="Product Name">Product Name</SelectItem>
-                    <SelectItem value="Price">Price</SelectItem>
-                    <SelectItem value="Quantity">Quantity</SelectItem>
-                    <SelectItem value="Date">Date</SelectItem>
-                    <SelectItem value="Status">Status</SelectItem>
-                  </SelectContent>
-                </Select>
               </TabsList>
             </div>
-            <TabsContent value="allOrders">
-    
+
+            {orderTab === "pendingDisputes" ? (
+            <TabsContent value="pendingDisputes">
+            <HelpCenterTableWrapper
+              columns={columns}
+              data={HELPCENTERTABLE_ITEMS.filter(
+                (product) => product.status === "Pending disputes"
+              )}
+              onRowClick={handleRowClick}
+            />
+        </TabsContent>
+              ) : (
+                <TabsContent value="solvedDisputes">
                 <HelpCenterTableWrapper
                   columns={columns}
+                  data={HELPCENTERTABLE_ITEMS.filter(
+                    (product) => product.status === "Solved disputes"
+                  )}
                   onRowClick={handleRowClick}
                 />
-              
             </TabsContent>
-            {/* <TabsContent value="inProgress">
-                {viewType === 'view' ? (
-                  <OrdersTableWrapper />
-                ) : (
-                  <AdminTableWrapper />
-                )}
-              </TabsContent>
-              <TabsContent value="delivered">
-                {viewType === 'view' ? (
-                  <OrdersTableWrapper />
-                ) : (
-                  <AdminTableWrapper />
-                )}
-                </TabsContent> */}
+              )}
           </Tabs>
         </Card>
 
         {selectedCompany && (
-          <Card className="w-1/4 max-h-[550px] custom-scrollbar overflow-y-auto mb-4">
+          <Card className="w-2/5 max-h-[650px] custom-scrollbar overflow-y-auto mb-4">
             <HelpCenterInfo selectedCompany={selectedCompany} />
           </Card>
         )}
@@ -135,4 +95,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default HelpCenter;

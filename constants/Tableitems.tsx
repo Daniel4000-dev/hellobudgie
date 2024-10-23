@@ -230,6 +230,7 @@ export const ADMINTABLE_ITEMS: AdminTableProps[] = [
     title: "COO",
     tier: "1",
     dateJoined: "29/01/2020",
+    status: 'Active'
   },
   {
     id: "m5e4ifi9",
@@ -238,6 +239,7 @@ export const ADMINTABLE_ITEMS: AdminTableProps[] = [
     title: "COO",
     tier: "1",
     dateJoined: "29/01/2020",
+    status: 'Active'
   },
   {
     id: "m5eti4i9",
@@ -246,6 +248,7 @@ export const ADMINTABLE_ITEMS: AdminTableProps[] = [
     title: "Customer Agent",
     tier: "2",
     dateJoined: "29/01/2020",
+    status: 'Suspended'
   },
   {
     id: "m5e4i4d9",
@@ -254,6 +257,7 @@ export const ADMINTABLE_ITEMS: AdminTableProps[] = [
     title: "Customer Agent",
     tier: "2",
     dateJoined: "29/01/2020",
+    status: 'Suspended'
   },
 ];
 
@@ -290,6 +294,7 @@ export const HELPCENTERTABLE_ITEMS: HelpCenterTableProps[] = [
     email: "email@example.com",
     name: "James Eli",
     date: "29/01/2020",
+    status: 'Pending disputes'
   },
   {
     id: "m5e4i4d9",
@@ -298,6 +303,7 @@ export const HELPCENTERTABLE_ITEMS: HelpCenterTableProps[] = [
     email: "customeremail@example.com",
     name: "Celi Omar",
     date: "29/01/2020",
+    status: 'Solved disputes'
   },
   {
     id: "m5e4i2d9",
@@ -306,6 +312,7 @@ export const HELPCENTERTABLE_ITEMS: HelpCenterTableProps[] = [
     email: "email@example.com",
     name: "Celi Omar",
     date: "29/01/2020",
+    status: 'Solved disputes'
   },
 ]
 

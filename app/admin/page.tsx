@@ -2,7 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import Icon from "../../public/icon";
-import Image from "@/node_modules/next/image";
+import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useEffect, useState } from "react";
 import {
@@ -13,13 +13,16 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { columns as defaultColumns } from "./Column";
+import OrdersTableWrapper from "@/components/OrdersTableWrapper";
+import OrdersTableGridWrapper from "@/components/OrdersTableGridWrapper";
+import OrdersInfo from "@/components/OrdersInfos";
+import { ADMINTABLE_ITEMS, ORDERSTABLE_ITEMS } from "@/constants/Tableitems";
+import OverHead from "@/components/OverHead";
 import AdminTableWrapper from "@/components/AdminTableWrapper";
 import AdminTableGridWrapper from "@/components/AdminTableGridWrapper";
-import AdminHead from "@/components/AdminHeader";
-import AdminInfo from "@/components/AdminInfos";
 
-const Orders = () => {
-  const [orderTab, setOrderTab] = useState("allOrdders");
+const Admin = () => {
+  const [orderTab, setOrderTab] = useState("allOrders");
   const [viewType, setViewType] = useState("view");
   const [columns, setColumns] = useState(defaultColumns);
   const [selectedCompany, setSelectedCompany] = useState<any>(null);
@@ -31,14 +34,15 @@ const Orders = () => {
   const toggleViewType = () => {
     setViewType((prevView) => (prevView === "view" ? "grid" : "view"));
   };
+
   const handleOrderTabChange = (value: string) => {
     setOrderTab(value);
   };
 
-  const handleColumnSort = (selcetedHeader: string) => {
+  const handleColumnSort = (selectedHeader: string) => {
     const reorderedColumns = [...defaultColumns];
     const index = reorderedColumns.findIndex(
-      (col) => col.header === selcetedHeader
+      (col) => col.header === selectedHeader
     );
     if (index !== -1) {
       const [selectedColumn] = reorderedColumns.splice(index, 1);
@@ -54,92 +58,125 @@ const Orders = () => {
   return (
     <div className="flex-1 space-y4">
       <div>
-        <AdminHead />
+        <OverHead />
       </div>
       <div className="flex gap-4">
         <Card
           className={`flex-1 mb-4 custom-scrollbar overflow-y-auto ${
-            selectedCompany ? "w-3/4" : "w-full"
+            selectedCompany ? "w-3/5" : "w-full"
           }`}
         >
-          <Tabs defaultValue="allOrders" className="flex flex-col">
+          <Tabs defaultValue="allOrders" className="flex flex-col" value={orderTab} onValueChange={handleOrderTabChange}>
             <div className="flex justify-between items-center">
-              <TabsList className="flex justify-start gap-4 w-full bg-white">
+              <TabsList className="flex justify-start w-full bg-white">
+              <div className='border-r-[1px] pr-1'>
                 <TabsTrigger
-                  className={`text-[#E8903D] border-b-2 border-[#E8903D] rounded-none ${
-                    orderTab === "allOrders" ? "active-tab-class" : ""
+                  className={`rounded-none ${
+                    orderTab === "allOrders" ? "active-tab-class text-[#E8903D] border-b-2 border-[#E8903D]" : ""
                   }`}
-                  onClick={() => handleOrderTabChange("allOrders")}
                   value="allOrders"
                 >
-                  All orders
+                  All Products
+                </TabsTrigger>
+                </div>
+                <TabsTrigger
+                  value="active"
+                  className={orderTab === "active" ? "active-tab-class text-[#E8903D] border-b-2 border-[#E8903D] rounded-none" : ""}
+                >
+                 Active
                 </TabsTrigger>
                 <TabsTrigger
-                  onClick={() => handleOrderTabChange("inProgress")}
-                  value="inProgress"
+                  value="suspended"
+                  className={orderTab === "suspended" ? "active-tab-class text-[#E8903D] border-b-2 border-[#E8903D] rounded-none" : ""}
                 >
-                  In progress
-                </TabsTrigger>
-                <TabsTrigger
-                  onClick={() => handleOrderTabChange("delivered")}
-                  value="delivered"
-                >
-                  Delivered
+                  Suspended
                 </TabsTrigger>
               </TabsList>
               <TabsList className="flex justify-end gap-4 w-full bg-white">
-                <div onClick={toggleViewType} className="flex gap-2">
+                <div
+                  onClick={toggleViewType}
+                  className="flex items-center gap-2 cursor-pointer text-xs pr-3 border-r-[1px]"
+                >
                   <h2>View</h2>
                   <Image
                     src={viewType === "view" ? Icon.View : Icon.Menu}
                     alt="view"
+                    className='w-4 h-4'
                   />
                 </div>
                 <Select onValueChange={handleColumnSort}>
-                  <SelectTrigger className="w-[180px]">
-                    <SelectValue placeholder="Sort by" />
+                  <SelectTrigger className="w-[120px]">
+                    <SelectValue className="pl-8" placeholder="Sort by" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="Order ID">Order ID</SelectItem>
-                    <SelectItem value="Product Name">Product Name</SelectItem>
-                    <SelectItem value="Price">Price</SelectItem>
-                    <SelectItem value="Quantity">Quantity</SelectItem>
-                    <SelectItem value="Date">Date</SelectItem>
-                    <SelectItem value="Status">Status</SelectItem>
+                    <SelectItem value="adminId">ID</SelectItem>
+                    <SelectItem value="name">Name</SelectItem>
+                    <SelectItem value="title">Title</SelectItem>
+                    <SelectItem value="tier">Tier</SelectItem>
+                    <SelectItem value="dateJoined">Date Joined</SelectItem>
                   </SelectContent>
                 </Select>
               </TabsList>
             </div>
+
             <TabsContent value="allOrders">
               {viewType === "view" ? (
                 <AdminTableWrapper
                   columns={columns}
+                  data={ADMINTABLE_ITEMS}
                   onRowClick={handleRowClick}
                 />
               ) : (
-                <AdminTableGridWrapper onRowClick={handleRowClick} />
+                <AdminTableGridWrapper
+                  data={ADMINTABLE_ITEMS}
+                  onRowClick={handleRowClick}
+                />
               )}
             </TabsContent>
-            {/* <TabsContent value="inProgress">
-                {viewType === 'view' ? (
-                  <OrdersTableWrapper />
-                ) : (
-                  <AdminTableWrapper />
-                )}
-              </TabsContent>
-              <TabsContent value="delivered">
-                {viewType === 'view' ? (
-                  <OrdersTableWrapper />
-                ) : (
-                  <AdminTableWrapper />
-                )}
-                </TabsContent> */}
+
+            <TabsContent value="active">
+              {viewType === "view" ? (
+                <AdminTableWrapper
+                  columns={columns}
+                  data={ADMINTABLE_ITEMS.filter(
+                    (product) => product.status === "Active"
+                  )}
+                  onRowClick={handleRowClick}
+                />
+              ) : (
+                <AdminTableGridWrapper
+                  data={ADMINTABLE_ITEMS.filter(
+                    (product) => product.status === "Active"
+                  )}
+                  onRowClick={handleRowClick}
+                />
+              )}
+            </TabsContent>
+
+            <TabsContent value="suspended">
+              {viewType === "view" ? (
+                <AdminTableWrapper
+                  columns={columns}
+                  data={ADMINTABLE_ITEMS.filter(
+                    (product) => product.status === "Suspended"
+                  )}
+                  onRowClick={handleRowClick}
+                />
+              ) : (
+                <AdminTableGridWrapper
+                  data={ADMINTABLE_ITEMS.filter(
+                    (product) => product.status === "Suspended"
+                  )}
+                  onRowClick={handleRowClick}
+                />
+              )}
+            </TabsContent>
           </Tabs>
         </Card>
 
         {selectedCompany && (
-          <Card className="w-1/4 max-h-[350px] custom-scrollbar overflow-y-auto mb-4">
-            <AdminInfo selectedCompany={selectedCompany} />
+          <Card className="w-2/5 max-h-[650px] custom-scrollbar overflow-y-auto mb-4">
+            <OrdersInfo selectedCompany={selectedCompany} />
           </Card>
         )}
       </div>
@@ -147,4 +184,4 @@ const Orders = () => {
   );
 };
 
-export default Orders;
+export default Admin;

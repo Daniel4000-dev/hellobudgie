@@ -3,9 +3,9 @@ import { GenericTable } from "@/tableInterface/DataTable";
 import React from "react";
 import Image from "@/node_modules/next/image";
 import { Card } from "./ui/card";
-import { ProductTableWrapperProps } from "@/types/types";
+import { ProductTableGridWrapperProps } from "@/types/types";
 
-const ProductTableGridWrapper = ({ data, onRowClick }: ProductTableWrapperProps) => {
+const ProductTableGridWrapper = ({ data, onRowClick }: ProductTableGridWrapperProps) => {
   return (
     <div className="max-h-[600px] grid grid-cols-4 p-6 pb-4 gap-3 rounded-lg">
       {data.map((item, index) => {

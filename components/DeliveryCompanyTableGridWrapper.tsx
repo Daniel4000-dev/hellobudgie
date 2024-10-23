@@ -1,12 +1,12 @@
-import { DELIVERYCOMPANYTABLE_ITEMS } from "@/constants/Tableitems";
 import React from "react";
 import Image from "@/node_modules/next/image";
 import { Card } from "./ui/card";
+import { ProductTableGridWrapperProps } from "@/types/types";
 
-const DeliveryCompanyTableGridWrapper = ({ onRowClick }: { onRowClick: (rowData: any) => void }) => {
+const DeliveryCompanyTableGridWrapper = ({ data, onRowClick }: ProductTableGridWrapperProps) => {
   return (
     <div className="max-h-[600px] grid grid-cols-4 p-6 pb-4 gap-3 rounded-lg">
-      {DELIVERYCOMPANYTABLE_ITEMS.map((item, index) => {
+      {data.map((item, index) => {
         return (
           <Card key={index} className='bg-[#FFF8F1] h-[300px] p-2' onClick={onRowClick}>
             <div>

@@ -82,6 +82,11 @@ export type ProductTableWrapperProps = {
     onRowClick: (rowData: any) => void;
 }
 
+export type ProductTableGridWrapperProps = {
+    data: any[];
+    onRowClick: (rowData: any) => void;
+}
+
   export type OrdersTableDeliveryBy ={
     icon?: StaticImageData;
     name: string;
@@ -107,6 +112,7 @@ export type AdminTableProps = {
     title: string;
     tier: string;
     dateJoined: string;
+    status: string;
 }
 
 export type DeliveryCompanyTableName = {
@@ -133,4 +139,5 @@ export type HelpCenterTableProps = {
     email: string;
     name: string;
     date: string;
+    status: string;
 }
